@@ -8,11 +8,17 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ElAlert: typeof import('element-plus/es')['ElAlert']
+    ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElMain: typeof import('element-plus/es')['ElMain']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     HlsPlayer: typeof import('./src/components/HlsPlayer.vue')['default']
+    WebRTCPlayer: typeof import('./src/components/WebRTCPlayer.vue')['default']
+    WsPlayer: typeof import('./src/components/WsPlayer.vue')['default']
+    WSPlayer: typeof import('./src/components/WSPlayer.vue')['default']
   }
 }
