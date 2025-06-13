@@ -13,6 +13,7 @@
   
   <script setup>
   import { onMounted, ref } from 'vue'
+  import { config } from '../config'
   
   const videoRef = ref(null)
   
@@ -23,8 +24,7 @@
       const script2 = document.createElement('script')
       script2.src = '/wsplayer/wsPlayer.js'
       script2.onload = () => {
-        const wsUrl = 'ws://124.220.17.14:8800/live/phonecam.live.mp4'
-        const player = new window.wsPlayer('video', wsUrl)
+        const player = new window.wsPlayer('video', config.wsUrl)
         player.open()
       }
       document.body.appendChild(script2)
